@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Aeonik-Bold";
+  src: url("/fonts/aeonik/AeonikTRIAL-Bold.otf");
+}
+
+@font-face {
+  font-family: "Aeonik-Light";
+  src: url("/fonts/aeonik/AeonikTRIAL-Light.otf");
+}
+
+@font-face {
+  font-family: "Aeonik-Regular";
+  src: url("/fonts/aeonik/AeonikTRIAL-Regular.otf");
+}
+
+body {
+  background: linear-gradient(to right, #2c1515, #500200);
+}
+
+.navgrad {
+  background: linear-gradient(to right, #2c1515, #500200);
+}
+
+.header-Shadow {
+  text-shadow: 0px 0px 10px #ff0000;
+}
+
+@layer base {
+  body {
+    @apply m-0 !scroll-smooth;
+  }
+
+  p {
+    @apply text-gray-300 leading-5 font-aeonikRegular tracking-normal text-sm md:text-xl;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-gray-200 font-aeonikBold;
+  }
+
+  h1 {
+    @apply text-5xl leading-none tracking-normal md:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:leading-none md:text-5xl;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl;
+  }
+
+  li {
+    @apply font-aeonikLight text-[#1f2937] font-normal cursor-pointer;
+  }
+
+  .button {
+    @apply rounded-xl bg-[#c1201d] text-white hover:border-2 hover:bg-transparent hover:border-[#c1201d];
+  }
+}
+
+.card-hover:hover {
+  background: linear-gradient(to right, #812f2f, #814c4c);
+}
+
+.slide-in-right {
+  animation: slide-in-r 0.4s ease-in;
+}
+
+@keyframes slide-in-r {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-bottom {
+  animation: slide-in-b 0.4s ease-in;
+}
+
+@keyframes slide-in-b {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slide-in-top {
+  animation: slide-in-t 0.3s ease-in;
+}
+
+@keyframes slide-in-t {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
