@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <button
           onClick={top}
-          className="text-white bg-[#c1201d] px-5 py-4 mb-5 md:mx-16"
+          className="text-white bg-[#c1201d] px-5 py-4 mb-5 md:mx-16 scroll-smooth"
         >
           <IoArrowUpOutline size={25} />
         </button>
