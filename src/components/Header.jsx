@@ -36,7 +36,6 @@ const Header = () => {
             viewport={{
               once: true,
             }}
-            transition={{ duration: 0.5, ease: "linear" }}
             src="/images/zorro.png"
             className="w-[75%] md:w-[20%] mx-auto"
           />
@@ -47,7 +46,6 @@ const Header = () => {
             viewport={{
               once: true,
             }}
-            transition={{ duration: 0.5, ease: "linear" }}
             className="px-4 py-6"
           >
             <h1 className="pb-4 md:py-5 drop-shadow-lg tracking-wide header-Shadow">
@@ -65,7 +63,6 @@ const Header = () => {
             viewport={{
               once: true,
             }}
-            transition={{ duration: 0.5, ease: "linear" }}
             className="flex justify-between items-center mx-10 slide-in-top md:w-[25%] md:mx-auto"
           >
             <hr className="w-[15%] bg-[#c1201d] border-0 h-[2px]" />

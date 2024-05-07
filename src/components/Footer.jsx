@@ -49,16 +49,7 @@ const Footer = () => {
           <IoArrowUpOutline size={25} />
         </button>
       </div>
-      <motion.div
-        variants={fadeInAnimationVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{
-          once: true,
-        }}
-        transition={{ duration: 0.5, ease: "linear" }}
-        className="border-t-[1px] border-gray-600 text-center py-6 lg:flex lg:justify-between lg:items-center lg:px-16"
-      >
+      <div className="border-t-[1px] border-gray-600 text-center py-6 lg:flex lg:justify-between lg:items-center lg:px-16">
         <p className="lg:text-base lg:text-gray-400">
           © 2024 Zorro. All Rights Reserved.
         </p>
@@ -79,7 +70,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </motion.div>
+      </div>
     </>
   );
 };

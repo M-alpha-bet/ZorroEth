@@ -28,16 +28,7 @@ const About = () => {
 
   return (
     <>
-      <motion.div
-        variants={fadeInAnimationVariants}
-        initial="initial"
-        whileInView="animate"
-        viewport={{
-          once: true,
-        }}
-        transition={{ delay: 0.2 }}
-        className="text-center px-5 py-20"
-      >
+      <div className="text-center px-5 py-20">
         <h2 className="text-[#c1201d]">
           ABOUT <span className="text-white">$ZORRO</span>
         </h2>
@@ -48,18 +39,9 @@ const About = () => {
           transactions with advanced cryptography to provide a truly anonymous
           and secure environment for financial transactions and smart contracts.
         </p>
-      </motion.div>
+      </div>
       <div className="text-center px-5 py-10">
-        <motion.div
-          variants={fadeInRightAnimationVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{
-            once: true,
-          }}
-          transition={{ delay: 0.2 }}
-          className="slide-in-top md:px-20"
-        >
+        <div className="slide-in-top md:px-20">
           <h2>
             Unmatched Privacy: The Power of Zero-Knowledge Proofs in{" "}
             <span className="text-[#c1201d]">Zorro</span>
@@ -68,7 +50,7 @@ const About = () => {
             Dive into the world of decentralized finance and see how Zorro is
             leading the way.
           </p>
-        </motion.div>
+        </div>
 
         <Cards />
       </div>
