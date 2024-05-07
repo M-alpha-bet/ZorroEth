@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <>
       <div className="text-center pt-40 md:pt-48">
-        <div>
+        <div className="lg:bg-[url('/images/parallax-money.png')] lg:bg-center">
           <img
             src="/images/zorro.png"
             className="w-[75%] md:w-[20%] mx-auto slide-in-bottom"
