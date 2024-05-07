@@ -19,9 +19,15 @@ const NavBar = () => {
           <img className="h-[50px] w-[50px] mx-3" src="/images/zorro.png" />
           <div>
             <div className="hidden md:flex px-6 md:items-center">
-              <p className="px-4 text-sm font-aeonikBold">ABOUT</p>
-              <p className="px-4 text-sm font-aeonikBold">KEY FEATURES</p>
-              <p className="pl-4 pr-20 text-sm font-aeonikBold">SWAP</p>
+              <p className="px-4 text-sm font-aeonikBold md:hover:text-red-500">
+                ABOUT
+              </p>
+              <p className="px-4 text-sm font-aeonikBold md:hover:text-red-500">
+                KEY FEATURES
+              </p>
+              <p className="pl-4 pr-20 text-sm font-aeonikBold md:hover:text-red-500">
+                SWAP
+              </p>
               <div className="text-[#c1201d] px-5 cursor-pointer hover:scale-115 ease-in duration-300">
                 <a href="https://t.me/zorroportal_erc">
                   <FaTelegramPlane size={25} />

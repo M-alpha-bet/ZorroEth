@@ -1,11 +1,43 @@
 import React from "react";
 
 import Cards from "./Cards";
+import { motion } from "framer-motion";
 
 const About = () => {
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
+  };
+
+  const fadeInRightAnimationVariants = {
+    initial: {
+      opacity: 0,
+      x: 200,
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+    },
+  };
+
   return (
     <>
-      <div className="text-center px-5 py-20 slide-in-right">
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        transition={{ delay: 0.2 }}
+        className="text-center px-5 py-20"
+      >
         <h2 className="text-[#c1201d]">
           ABOUT <span className="text-white">$ZORRO</span>
         </h2>
@@ -16,9 +48,18 @@ const About = () => {
           transactions with advanced cryptography to provide a truly anonymous
           and secure environment for financial transactions and smart contracts.
         </p>
-      </div>
+      </motion.div>
       <div className="text-center px-5 py-10">
-        <div className="slide-in-top md:px-20">
+        <motion.div
+          variants={fadeInRightAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once: true,
+          }}
+          transition={{ delay: 0.2 }}
+          className="slide-in-top md:px-20"
+        >
           <h2>
             Unmatched Privacy: The Power of Zero-Knowledge Proofs in{" "}
             <span className="text-[#c1201d]">Zorro</span>
@@ -27,7 +68,7 @@ const About = () => {
             Dive into the world of decentralized finance and see how Zorro is
             leading the way.
           </p>
-        </div>
+        </motion.div>
 
         <Cards />
       </div>

@@ -4,10 +4,22 @@ import { IoArrowUpOutline } from "react-icons/io5";
 import { FaTwitter } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
 import { MdMail } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   const top = () => {
     window.scrollTo(0, 0);
+  };
+
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 100,
+    },
+    animate: {
+      opacity: 1,
+      y: 0,
+    },
   };
 
   return (
@@ -19,23 +31,34 @@ const Footer = () => {
         />
         <div className="flex justify-center py-6">
           <a href="/">
-            <p className="px-4  md:text-base">ABOUT</p>
+            <p className="px-4  md:text-base md:hover:text-red-500">ABOUT</p>
           </a>
           <a href="/">
-            <p className="px-4  md:text-base">KEY FEATURES</p>
+            <p className="px-4  md:text-base md:hover:text-red-500">
+              KEY FEATURES
+            </p>
           </a>
           <a href="/">
-            <p className="px-4  md:text-base">SWAP</p>
+            <p className="px-4  md:text-base md:hover:text-red-500">SWAP</p>
           </a>
         </div>
         <button
           onClick={top}
-          className="text-white bg-[#c1201d] px-5 py-4 mb-5 md:mx-16 scroll-smooth"
+          className="text-white bg-[#c1201d] px-5 py-4 mb-5 md:mx-16"
         >
           <IoArrowUpOutline size={25} />
         </button>
       </div>
-      <div className="border-t-[1px] border-gray-600 text-center py-6 lg:flex lg:justify-between lg:items-center lg:px-16">
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        transition={{ duration: 0.5, ease: "linear" }}
+        className="border-t-[1px] border-gray-600 text-center py-6 lg:flex lg:justify-between lg:items-center lg:px-16"
+      >
         <p className="lg:text-base lg:text-gray-400">
           © 2024 Zorro. All Rights Reserved.
         </p>
@@ -56,7 +79,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
