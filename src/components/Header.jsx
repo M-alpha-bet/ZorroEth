@@ -20,18 +20,22 @@ const Header = () => {
           </div>
           <div className="flex justify-between items-center mx-10 slide-in-top md:w-[25%] md:mx-auto">
             <hr className="w-[15%] bg-[#c1201d] border-0 h-[2px]" />
-            <button
-              className="button py-4 px-4 text-sm md:text-base font-aeonikLight tracking-wider"
-              type="submit"
-            >
-              BUY
-            </button>
-            <button
-              className="button py-4 px-4 text-sm md:text-base font-aeonikLight tracking-wider"
-              type="submit"
-            >
-              CHART
-            </button>
+            <a href="https://app.uniswap.org/swap?use=V2&inputCurrency=ETH&outputCurrency=">
+              <button
+                className="button py-4 px-4 text-sm md:text-base font-aeonikLight tracking-wider"
+                type="submit"
+              >
+                BUY
+              </button>
+            </a>
+            <a href="https://www.dextools.io/app/en/ether/pair-explorer/">
+              <button
+                className="button py-4 px-4 text-sm md:text-base font-aeonikLight tracking-wider"
+                type="submit"
+              >
+                CHART
+              </button>
+            </a>
             <hr className="w-[15%] bg-[#c1201d] border-0 h-[2px]" />
           </div>
           <p className="text-[13px] md:text-base font-aeonikLight py-6">

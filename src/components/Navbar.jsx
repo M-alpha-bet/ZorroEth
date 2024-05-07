@@ -93,7 +93,7 @@ const NavBar = () => {
                   <p className="mx-5 pt-8 font-aeonikRegular">SWAP</p>
                 </a>
               </div>
-              <div className="sticky top-[70vh]">
+              <div className="sticky top-[60vh]">
                 <div className="pt-20 mx-5">
                   <div className="flex items-center justify-center my-8 w-full sm:w-[80%]">
                     <div className="text-[#c1201d] px-5 cursor-pointer hover:scale-115 ease-in duration-300">
