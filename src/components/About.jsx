@@ -15,20 +15,17 @@ const About = () => {
     },
   };
 
-  const fadeInRightAnimationVariants = {
-    initial: {
-      opacity: 0,
-      x: 200,
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-    },
-  };
-
   return (
     <>
-      <div className="text-center px-5 py-20">
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="text-center px-5 py-20"
+      >
         <h2 className="text-[#c1201d]">
           ABOUT <span className="text-white">$ZORRO</span>
         </h2>
@@ -39,8 +36,16 @@ const About = () => {
           transactions with advanced cryptography to provide a truly anonymous
           and secure environment for financial transactions and smart contracts.
         </p>
-      </div>
-      <div className="text-center px-5 py-10">
+      </motion.div>
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        className="text-center px-5 py-10"
+      >
         <div className="slide-in-top md:px-20">
           <h2>
             Unmatched Privacy: The Power of Zero-Knowledge Proofs in{" "}
@@ -53,7 +58,7 @@ const About = () => {
         </div>
 
         <Cards />
-      </div>
+      </motion.div>
     </>
   );
 };

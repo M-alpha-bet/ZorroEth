@@ -36,6 +36,7 @@ const Header = () => {
             viewport={{
               once: true,
             }}
+            transition={{ duration: 0.5 }}
             src="/images/zorro.png"
             className="w-[75%] md:w-[20%] mx-auto"
           />
@@ -46,6 +47,7 @@ const Header = () => {
             viewport={{
               once: true,
             }}
+            transition={{ duration: 0.5 }}
             className="px-4 py-6"
           >
             <h1 className="pb-4 md:py-5 drop-shadow-lg tracking-wide header-Shadow">

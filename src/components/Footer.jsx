@@ -24,7 +24,16 @@ const Footer = () => {
 
   return (
     <>
-      <div className="text-center lg:flex lg:justify-between lg:items-center md:py-8">
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        transition={{ duration: 0.5 }}
+        className="text-center lg:flex lg:justify-between lg:items-center md:py-8"
+      >
         <img
           src="/images/zorro.png"
           className="w-[50px] h-[50px] md:w-[60px] md:h-[60px] mx-auto md:mx-16"
@@ -48,8 +57,17 @@ const Footer = () => {
         >
           <IoArrowUpOutline size={25} />
         </button>
-      </div>
-      <div className="border-t-[1px] border-gray-600 text-center py-6 lg:flex lg:justify-between lg:items-center lg:px-16">
+      </motion.div>
+      <motion.div
+        variants={fadeInAnimationVariants}
+        initial="initial"
+        whileInView="animate"
+        viewport={{
+          once: true,
+        }}
+        transition={{ duration: 0.5 }}
+        className="border-t-[1px] border-gray-600 text-center py-6 lg:flex lg:justify-between lg:items-center lg:px-16"
+      >
         <p className="lg:text-base lg:text-gray-400">
           © 2024 Zorro. All Rights Reserved.
         </p>
@@ -70,7 +88,7 @@ const Footer = () => {
             </a>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
